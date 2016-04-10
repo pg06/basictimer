@@ -1,11 +1,11 @@
-// Add countdown in this
+// Add countdown
 // ...
 function basicTimer(elementId,startTime,endTime) {
     var element, startTime, endTime, baseTime, isFinished;
     isFinished = false;
     startTime = typeof startTime === 'undefined' || !startTime ? 0 : startTime;
     endTime = typeof endTime === 'undefined' || !endTime ? 0 : endTime;
-    if (endTime < startTime) { console.log('Help:\nLast parameter (endTime) should be higher or equal to the second parameter (startTime).') }
+    if (endTime > 0 && endTime < startTime) { console.log('Help:\nLast parameter (endTime) should be higher or equal to the second parameter (startTime).') }
     baseTime = new Date;
     function refershTimer(time_) {
         hours = time_.getUTCHours();
